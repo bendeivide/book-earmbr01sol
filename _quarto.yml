@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: docs
+
+#bibliography: bibliog.bib
+link-citations: true
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+lang: pt-BR
+book:
+  page-navigation: true
+  reader-mode: true
+  cover-image: hardcover.png
+  favicon: favicon.ico
+  title: "R básico: Manual de soluções"
+  author: "Ben Dêivide de O. Batista"
+  date: ""
+  page-footer:
+    left: |
+      R básico: Manual de soluções foi escrito por  <a href="https://bendeivide.github.io/">Ben Dêivide de O. Batista.</a> 
+    right: |
+      Esse livro foi desenvolvido com o <a href="https://quarto.org/">Quarto</a>.
+  chapters:
+    - index.qmd
+    - references.qmd
+
+#https://quarto.org/docs/output-formats/html-themes.html
+format:
+  html:
+    theme: cerulean
+  pdf:
+    documentclass: scrreprt
+
+
+
+
