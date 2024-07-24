@@ -5,5 +5,54 @@
     "title": "R básico: Manual de soluções",
     "section": "",
     "text": "Bem-vindo\nEsse é um livro digital intitulado “R básico: Manual de soluções”, com o selo Democratizando Conhecimento (DC). Este livro é um convite ao manual de soluções do R básico, apresentando de forma sistemáticas as resoluções dos exercícios do livro referência. Fazemos uma abordagem teórica e aplicada utilizando scripts em código R.   O número de leitores que acessaram esse livro: \n\n\n \n\n\n\nLivro físico\nEste livro ainda se encontra em desenvolvimento!\n\n\nISBN\n\nISBN (Digital):\nISBN (Físico):\n\n\n\nLicença\n\n\n\n\n\nEste trabalho está sob a Licença Creative Commons - Atribuição-NãoComercial 4.0 Internacional.\n\n\n\n\n\n\n\nUsamos também a filosofia de trabalho com o Selo Democratizando Conhecimento (DC), que pode ser acessada em https://bendeivide.github.io/dc/. O leitor é livre para compartilhar, redistribuir, transformar ou adaptar esta obra, desde que não venha a utilizá-la em nenhuma atividade de propósito comercial. Por fim, a única exigência é a atribuição dos créditos aos autores da obra.\n\n\n \n\n\nComo citar\n\nComo citar essa obra (Impressa):\nComo citar essa obra (Digital):"
+  },
+  {
+    "objectID": "prefacio.html",
+    "href": "prefacio.html",
+    "title": "Prefácio",
+    "section": "",
+    "text": "O R básico: Manual de Soluções vem com o propósito de detalhar as estratégias de como resolver os exercícios do livro R básico, enfatizando as estratégias com que as soluções podem ser desenvolvidas. Mostraremos mecanismos não apenas de como resolveremos os problemas, mas como eles podem ser abordados de forma didática para cursos ou disciplinas que utilizem o Ambiente R.\nPor fim, este livro vem complementar todo assunto introdutório do , para o entendimento via exercícios resolvidos, e esperamos que o leitor possa retirar ao máximo o que o pode oferecer.\n\nBen Dêivide de Oliveira Batista  Ouro Branco, MG, 2024-07-24"
+  },
+  {
+    "objectID": "cap01.html#descrição-sobre-os-exercícios",
+    "href": "cap01.html#descrição-sobre-os-exercícios",
+    "title": "1  Entendendo a coleção Estudando o ambiente R",
+    "section": "1.1 Descrição sobre os exercícios",
+    "text": "1.1 Descrição sobre os exercícios\nA ideia dos exercícios deste capíyoututulo foi nortear o leitor aos problemas que podem ser deparados quando se estuda o . Desse modo, para leitores que conseguem resolver todos os exercícios deste capítulo, entendendo a profundidade do problema, poderá avançar na leitura dos próximos volumes da coleção Estudando o Ambiente R."
+  },
+  {
+    "objectID": "cap01.html#objetivo",
+    "href": "cap01.html#objetivo",
+    "title": "1  Entendendo a coleção Estudando o ambiente R",
+    "section": "1.2 Objetivo",
+    "text": "1.2 Objetivo\nForam realizados exercícios envolvendo todos os temas dos 11 capítulos. O objetivo é fazer com que o leitor realize os exercícios e veja se domina os temas abordados no livro. Caso a resolução seja realizada com facilidade, não será necessário fazer toda a leitura do livro, para que haja uma melhor otimização de estudo a coleção Estudando o Ambiente R."
+  },
+  {
+    "objectID": "cap01.html#assuntos-abordados",
+    "href": "cap01.html#assuntos-abordados",
+    "title": "1  Entendendo a coleção Estudando o ambiente R",
+    "section": "1.3 Assuntos abordados",
+    "text": "1.3 Assuntos abordados\nOs principais assuntos abordados deste capítulo são:\n\nPrincípios do R: (Exercício 1.6)\n\nObjeto\nFunção\nInterface (Exercícios 1.19, 1.20)\n\nPacotes:\n\nanexar pacotes (Exercícios 1.1, 1.4)\ncarregar pacotes (Exercício 1.1)\nNAMESPACE (Exercício 1.3)\nfunções internas de um pacote (Exercício 1.4)\n\nAmbientes:\n\nsuperatribuição (Exercícios 1.2, 1.6)\ncaminho de busca (Exercício 1.4)\nambiente envolvente (Exercícios 1.9,1.10)\nambiente de chamada (Exercícios 1.9, 1.10)\nambiente de execução (Exercícios 1.10)\n\nObjetos: (Exercício 1.25)\n\natribuição (Exercícios 1.5, 1.15)\nlista (Exercício 1.17)\nambiente (Exercício 1.23)\natributos (Exercício 1.21)\n\nintrínseco (Exercício 1.21)\nclass (Exercício 1.21)\n\n\nEstrutura de dados: (Exercício 1.25)\n\nvetor (Exercício 1.15)\nmatriz (Exercício 1.15)\narray (Exercício 1.15)\nquadro de dados (data frame) (Exercício 1.17)\n\nFunções:\n\nanônima (Exercício 1.8)\nchamada de função (Exercício 1.15)\nescopo (Exercício 1.23)\n\nléxico (Exercício 1.16)\n\nfunção print()(Exercício 1.24)\n\nComo R trabalha:\n\nscript (Exercícios 1.7, 1.16)\nlinhas de comando (Exercícios 1.5, 1.11, 1.24)\ncomentar um código (Exercício 1.13)\nRStudio (Exercício 1.14)\narquivos .Rhistory e .RData (Exercício 1.22)\nconsole (Exercício 1.24)"
+  },
+  {
+    "objectID": "cap01.html#abordagem-didática",
+    "href": "cap01.html#abordagem-didática",
+    "title": "1  Entendendo a coleção Estudando o ambiente R",
+    "section": "1.4 Abordagem didática",
+    "text": "1.4 Abordagem didática\nOs exercícios foram criados sem ordenarmos os assuntos de acordo com os capítulos, para que houvesse conexão de tópicos diferentes na sequência dos exercícios.\nDaremos algumas estratégias para um estudo aprofundado:\n\nEstudar profundamente o assunto abordado em Batista e Oliveira (2022);\nCrie um resumo do assunto (Sugestão):\n\nMapa mental;\nResumo de Cornell;\n\nCriar estratégias de solução simples;\nAprofundar estratégias mais elaboradas, sempre que possível;\nProcurar escrever as soluções por meio do código R, sempre que possível;\nComentar o código."
+  },
+  {
+    "objectID": "cap01.html#exercícios",
+    "href": "cap01.html#exercícios",
+    "title": "1  Entendendo a coleção Estudando o ambiente R",
+    "section": "1.5 Exercícios",
+    "text": "1.5 Exercícios\n\nExercício 1.1Qual a diferença entre anexar e carregar um pacote?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.2Por que a superatribuição &lt;&lt;- deve ser usada com cautela, principalmente quando se está desenvolvendo funções para um pacote?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.3Qual a importância da estrutura NAMESPACE em um pacote?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.4Por que devemos usar com cautela as funções internas não exportáveis, de um pacote? Como acessá-las? Como usamos uma função de um pacote sem anexá-lo ao caminho de busca? Por que esta última condição é mais interessante, quando se deseja utilizar poucas funções de um pacote?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.5\nQuantos objetos temos na linha de comando a seguir?\n\nx &lt;- 10\n\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.6Quais os três princípios do R? Identifique-os em termos de linhas de comandos criadas em R.\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.7Como salvamos um script? Qual a importância de um script?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.8O que são funções anônimas?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.9Podemos afirmar que sempre o ambiente envolvente e ambiente de chamada são ambientes iguais?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.10Considerando os ambientes envolvente, de execução e de chamada, qual dos três é um ambiente temporário? E quando este ambiente é criado?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.11Baseado na linha de comando: x &lt;- 1, por que não podemos afirmar que “x recebe o valor 1”?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.12Como importamos um banco de dados externo do ambiente R? E como exportamos um resultado desejado?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.13Por que comentar um código é muito importante para um programador?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.14Precisamos ter o RStudio para utilizar o ambiente R?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.15Podemos dizer que uma matriz ou array é um vetor? Se sim, o que os diferenciam?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.16\nConsiderando o script abaixo:\n\n# Criando um nome \"n\" associado a um objeto 10\nn &lt;- 10\nf1 &lt;- function() {\n  print(n) # Imprimindo \"n\"\n  n &lt;- 15 # Criando \"n\" no corpo da funcao\n  print(n) # Imprimindo n\n}\nf1(); n # Imprimindo \"f1\" e \"n\"\n\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.17Podemos afirmar que um data frame é uma lista? Justifique.\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.18Qual a importância de uma boa escrita de um código?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.19Por que o tem como um de seus princípios em sua origem, o princípio da interface?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.20Quais os pacotes R dão suporte como uma interface para as linguagens: Python, Julia, C/C++, FORTRAN, HTML e Java? Quais outros pacotes existem no como uma interface para outras linguagens?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.21O que representa os atributos para um objeto? Quais os dois atributos intrínsecos de um objeto? Qual a importância do atributo class para um objeto?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.22Para que serve os arquivos .RData e .Rhistory? Apresente exemplos práticos sobre o uso desses arquivos.\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.23Qual a relação existente entre o escopo de uma função e os objetos do tipo ambiente (environment)?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.24Como provamos que a função print() está implícita quando executamos uma linha de comando no console?\n\n\n\nProvaIsso é uma prova!\n\n\n\nExercício 1.25Qual a diferença entre estrutura de dados e tipo de objetos no ambiente R?\n\n\n\nProvaIsso é uma prova!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBATISTA, B. D. O.; OLIVEIRA, D. A. B. J. R básico. 1. ed. Ouro Branco, MG: [s.n.], 2022. p. 321"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "BATISTA, B. D. O.; OLIVEIRA, D. A. B. J. R básico. 1.\ned. Ouro Branco, MG: [s.n.], 2022. p. 321"
   }
 ]

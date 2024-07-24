@@ -1,0 +1,326 @@
+# Entendendo a coleção Estudando o ambiente R
+
+Todos os exercícios resolvidos desse material se baseiam no livro **R Básico** [@Rbasico2022].
+
+```{r, include=FALSE}
+# Links
+rlink <- "[R](http://r-project.org/){target='_blank'}"
+rstudio <- "[RStudio](http://rstudio.org/){target='_blank'}"
+cran <- "[CRAN](http://cran.r-project.org/){target='_blank'}"
+github <- "[GitHub](http://github.com/){target='_blank'}"
+git <- "[Git](https://git-scm.com/)"
+```
+
+## Descrição sobre os exercícios
+
+A ideia dos exercícios deste capíyoututulo foi nortear o leitor aos problemas que podem ser deparados quando se estuda o \rproja. Desse modo, para leitores que conseguem resolver todos os exercícios deste capítulo, entendendo a profundidade do problema, poderá avançar na leitura dos próximos volumes da coleção *Estudando o Ambiente R*.
+
+## Objetivo
+
+Foram realizados exercícios envolvendo todos os temas dos 11 capítulos. O objetivo é fazer com que o leitor realize os exercícios e veja se domina os temas abordados no livro. Caso a resolução seja realizada com facilidade, não será necessário fazer toda a leitura do livro, para que haja uma melhor otimização de estudo a coleção *Estudando o Ambiente R*.
+
+## Assuntos abordados
+
+Os principais assuntos abordados deste capítulo são:
+
+- Princípios do `r rlink`: (Exercício \ref{ex06})
+  - Objeto
+  - Função
+  - Interface (Exercícios \ref{ex19}, \ref{ex20})
+- Pacotes:
+  - anexar pacotes (Exercícios \ref{ex01}, \ref{ex04})
+  - carregar pacotes (Exercício \ref{ex01})
+  - *NAMESPACE* (Exercício \ref{ex03})
+  - funções internas de um pacote (Exercício \ref{ex04})
+- Ambientes:
+  - superatribuição (Exercícios \ref{ex02}, \ref{ex06})
+  - caminho de busca (Exercício \ref{ex04})
+  - ambiente envolvente (Exercícios \ref{ex09},\ref{ex10})
+  - ambiente de chamada (Exercícios \ref{ex09}, \ref{ex10})
+  - ambiente de execução (Exercícios \ref{ex10})
+- Objetos: (Exercício \ref{ex25})
+  - atribuição (Exercícios \ref{ex05}, \ref{ex15})
+  - lista (Exercício \ref{ex17})
+  - ambiente (Exercício \ref{ex23})
+  - atributos (Exercício \ref{ex21})
+    - intrínseco (Exercício \ref{ex21})
+    - `class` (Exercício \ref{ex21})
+- Estrutura de dados: (Exercício \ref{ex25})
+  - vetor (Exercício \ref{ex15})
+  - matriz (Exercício \ref{ex15})
+  - *array* (Exercício \ref{ex15})
+  - quadro de dados (*data frame*) (Exercício \ref{ex17})
+- Funções:
+  - anônima (Exercício \ref{ex08})
+  - chamada de função (Exercício \ref{ex15})
+  - escopo (Exercício \ref{ex23})
+    - léxico (Exercício \ref{ex16})
+  - função `print()`(Exercício \ref{ex24})
+- Como `r rlink` trabalha:
+  - *script* (Exercícios \ref{ex07}, \ref{ex16})
+  - linhas de comando (Exercícios  \ref{ex05},  \ref{ex11}, \ref{ex24})
+  - comentar um código (Exercício \ref{ex13})
+  - `r rstudio` (Exercício \ref{ex14})
+  - arquivos `.Rhistory` e `.RData` (Exercício \ref{ex22})
+  - console (Exercício \ref{ex24})
+
+
+## Abordagem didática
+
+Os exercícios foram criados sem ordenarmos os assuntos de acordo com os capítulos, para que houvesse conexão de tópicos diferentes na sequência dos exercícios.
+
+Daremos algumas estratégias para um estudo aprofundado:
+
+1.  Estudar profundamente o assunto abordado em @Rbasico2022;
+2.  Crie um resumo do assunto (Sugestão):
+    a)  Mapa mental;
+    b)  Resumo de Cornell;
+3.  Criar estratégias de solução simples;
+4.  Aprofundar estratégias mais elaboradas, sempre que possível;
+5.  Procurar escrever as soluções por meio do código `r rlink`, sempre que possível;
+6.  Comentar o código.
+
+## Exercícios
+
+::: {.Exercise #ex01}
+Qual a diferença entre anexar e carregar um pacote?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex02}
+Por que a  superatribuição `<<-` deve ser usada com cautela, principalmente quando se está desenvolvendo funções para um pacote?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex03}
+Qual a importância da estrutura *NAMESPACE* em um pacote?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex04}
+Por que devemos usar com cautela as  funções internas não exportáveis, de um pacote? Como acessá-las? Como usamos uma função de um pacote sem anexá-lo ao caminho de busca? Por que esta última condição é mais interessante, quando se deseja utilizar poucas funções de um pacote?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex05}
+Quantos objetos temos na linha de comando a seguir?
+```{r}
+x <- 10
+```
+
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex06}
+Quais os três princípios do `r rlink`? Identifique-os em termos de linhas de comandos criadas em `r rlink`.
+
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex07}
+Como salvamos um *script*? Qual a importância de um *script*?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex08}
+O que são funções anônimas?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex09}
+Podemos afirmar que sempre o ambiente envolvente e  ambiente de chamada são ambientes iguais?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex10}
+Considerando os  ambientes envolvente, de execução e  de chamada, qual dos três é um ambiente temporário? E quando este ambiente é criado?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex11}
+Baseado na linha de comando: `x <- 1`, por que não podemos afirmar que "x recebe o valor 1"?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex12}
+Como importamos um banco de dados externo do ambiente `r rlink`? E como exportamos um resultado desejado?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex13}
+Por que comentar um código é muito importante para um programador?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex14}
+Precisamos ter o `r rstudio` para utilizar o ambiente `r rlink`?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex15}
+Podemos dizer que uma matriz ou *array* é um vetor? Se sim, o que os diferenciam?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex16}
+Considerando o *script* abaixo:
+```{r echo=TRUE, eval=FALSE}
+# Criando um nome "n" associado a um objeto 10
+n <- 10
+f1 <- function() {
+  print(n) # Imprimindo "n"
+  n <- 15 # Criando "n" no corpo da funcao
+  print(n) # Imprimindo n
+}
+f1(); n # Imprimindo "f1" e "n"
+```
+
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+
+::: {.Exercise #ex17}
+Podemos afirmar que um *data frame* é uma lista? Justifique.
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex18}
+Qual a importância de uma boa escrita de um código?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex19}
+Por que o \rproj tem como um de seus princípios em sua origem, o princípio da interface?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex20}
+Quais os pacotes `r rlink` dão suporte como uma interface para as linguagens: **Python**, **Julia**, **C**/**C++**, **FORTRAN**, **HTML** e **Java**? Quais outros pacotes existem no \rproj como uma interface para outras linguagens?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex21}
+O que representa os atributos para um objeto? Quais os dois atributos intrínsecos de um objeto? Qual a importância do atributo `class` para um objeto?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex22}
+Para que serve os arquivos `.RData` e `.Rhistory`? Apresente exemplos práticos sobre o uso desses arquivos.
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex23}
+Qual a relação existente entre o escopo de uma função e os objetos do tipo ambiente (`environment`)?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex24}
+Como provamos que a função `print()` está implícita quando executamos uma linha de comando no `console`?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+::: {.Exercise #ex25}
+Qual a diferença entre estrutura de dados e tipo de objetos no ambiente `r rlink`?
+:::
+
+::: Proof
+Isso é uma prova!
+:::
+
+
+<!-- Baseado em: -->
+<!-- - https://stackoverflow.com/questions/73288264/shared-counter-in-quarto-for-exercises-examples-etc -->
+<!-- - https://github.com/ute/custom-numbered-blocks -->
+<!-- ::: {.Example #exm-1} -->
+<!-- This should be Example 1.1. -->
+<!-- ::: -->
+
+<!-- ::: {.Theorem #thm-1} -->
+<!-- This should be Example 1.1. -->
+<!-- ::: -->
+
+<!-- ::: Proof -->
+<!-- Isso é uma prova! -->
+<!-- ::: -->
+
+<!-- :::{.callout-note} -->
+<!-- ## Definition {#callout-1} -->
+<!-- This should be Definition 1.1. -->
+<!-- ::: -->
+
+<!-- :::{.callout-tip} -->
+<!-- ## Example {#callout-2} -->
+<!-- This should be Example 1.2. -->
+<!-- ::: -->

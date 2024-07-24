@@ -1,0 +1,19 @@
+# Prefácio {-}
+
+```{r, include=FALSE}
+# Links
+rlink <- "[R](http://r-project.org/){target='_blank'}"
+rstudio <- "[RStudio](http://rstudio.org/){target='_blank'}"
+cran <- "[CRAN](http://cran.r-project.org/){target='_blank'}"
+github <- "[GitHub](http://github.com/){target='_blank'}"
+git <- "[Git](https://git-scm.com/)"
+```
+
+O **R básico: Manual de Soluções**  vem com o propósito de detalhar as estratégias de como resolver os exercícios do livro **R básico**, enfatizando as estratégias com que as soluções podem ser desenvolvidas. Mostraremos mecanismos não apenas de como resolveremos os problemas, mas como eles podem ser abordados de forma didática para cursos ou disciplinas que utilizem o Ambiente `r rlink`.
+
+Por fim, este livro vem complementar todo assunto introdutório do \rproj, para o entendimento via exercícios resolvidos, e esperamos que o leitor possa retirar ao máximo o que o \rproj pode oferecer.
+
+<div align="right">
+**Ben Dêivide de Oliveira Batista** </br>
+Ouro Branco, MG, `r Sys.Date()`
+</div>

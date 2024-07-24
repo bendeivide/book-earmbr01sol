@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 
-#bibliography: bibliog.bib
+bibliography: bibliog.bib
 link-citations: true
 csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
 lang: pt-BR
@@ -21,14 +21,47 @@ book:
       Esse livro foi desenvolvido com o <a href="https://quarto.org/">Quarto</a>.
   chapters:
     - index.qmd
+    - prefacio.qmd
+    - cap01.qmd
     - references.qmd
 
 #https://quarto.org/docs/output-formats/html-themes.html
 format:
   html:
     theme: cerulean
-  pdf:
-    documentclass: scrreprt
+  # pdf:
+  #   documentclass: scrreprt
+
+# Baseado em:
+# - https://stackoverflow.com/questions/73288264/shared-counter-in-quarto-for-exercises-examples-etc
+# - https://github.com/ute/custom-numbered-blocks
+filters: 
+  - custom-numbered-blocks
+custom-numbered-blocks:
+  groups: 
+    exgrp: 
+      collapse: false
+      boxstyle: foldbox.simple #só existe essa opcao por enquanto
+  classes:
+    Example:
+      #colors: [948bde, 584eab]
+      group: exgrp
+      label: Exemplo
+    Exercise:
+      colors: [4485f6, 7c90b2]
+      group: exgrp
+      label: Exercício
+      #listin: [listexerc]
+    Theorem:
+      group: exgrp
+      label: Teorema
+    Proof:
+      numbered: false
+      colors: [aaa6a3, ]
+      collapse: true
+      boxstyle: foldbox.simple
+      label: Prova
+    
 
 
 
