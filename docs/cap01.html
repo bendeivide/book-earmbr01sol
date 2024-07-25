@@ -121,14 +121,14 @@ div.csl-indent {
   --color1: #4485f6;
   --color2: #7c90b2;
 }
+.Example {
+  --color1: #c0c0c0;
+  --color2: #808080;
+}
 .Proof {
   --color1: #aaa6a3;
 }
 .Theorem {
-  --color1: #c0c0c0;
-  --color2: #808080;
-}
-.Example {
   --color1: #c0c0c0;
   --color2: #808080;
 }
@@ -339,7 +339,7 @@ div.csl-indent {
 <div id="Proof*-1.1" class="Proof">
 <details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>
 <p><strong>I) Complemento de leitura:</strong></p>
-<p>Como sugestão, recomendamos a leitura do Capítulo 8 <span class="citation" data-cites="Rbasico2022">Batista e Oliveira (<a href="references.html#ref-Rbasico2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="rcore2021writing">R CORE TEAM (<a href="references.html#ref-rcore2021writing" role="doc-biblioref">2022</a>)</span> e <span class="citation" data-cites="hadley2015">Wickham (<a href="references.html#ref-hadley2015" role="doc-biblioref">2015</a>)</span>.</p>
+<p>Como sugestão, recomendamos a leitura do Capítulo 8 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>, <span class="citation" data-cites="rcore2021writing">R CORE TEAM (<a href="references.html#ref-rcore2021writing" role="doc-biblioref">2022</a>)</span> e <span class="citation" data-cites="hadley2015">Wickham (<a href="references.html#ref-hadley2015" role="doc-biblioref">2015</a>)</span>.</p>
 <p><strong>II) Discussão:</strong></p>
 <p>Dois termos muito confundidos no <a href="http://r-project.org/" target="_blank">R</a> são: <strong>carregar</strong> e <strong>anexar</strong> um pacote. O primeiro termo como o próprio nome sugere, representa a ação de carregar todas as funções, conjunto de dados de um referido pacote. Porém, a nível de usuário, esses objetos não estão disponíveis diretamente, a menos que se use o operador “<code>::</code>”. Para que os objetos de um pacote estejam disponíveis ao usuário, o pacote deve ser anexado, isto é, inserido no caminho de busca <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022, p. 247</a>)</span>. Por exemplo, quando usamos as funções <code>library()</code> ou <code>require()</code>, estamos sequencialmente carregando e anexando ao caminho de busca o referido pacote. De outro modo, quando anexamos um pacote obrigatoriamente ocorre o carregamento, e posteriormente a anexação ao caminho de busca. Assim, após esta ação, o usuário simplesmente digita o nome de uma determinada função no <em>prompt</em> de comando, sem necessidade de referenciar o nome do pacote anexado (usando o operador <code>::</code>). Portanto, quando usamos as funções <code>library()</code> ou , dizemos que ``anexamos um pacote’‘, e não’‘carregamos o pacote’’.</p>
 <p>Complementando o que foi discutido anteriormente, <span class="citation" data-cites="hadley2015">Wickham (<a href="references.html#ref-hadley2015" role="doc-biblioref">2015</a>)</span> afirma que:</p>
@@ -361,7 +361,7 @@ div.csl-indent {
 [1] ".1"
 
 $env
-&lt;environment: 0x62f8b84bcc30&gt;
+&lt;environment: 0x5828c9b7b880&gt;
 
 attr(,"class")
 [1] "tkwin"</code></pre>
@@ -389,7 +389,7 @@ attr(,"class")
 [1] ".2"
 
 $env
-&lt;environment: 0x62f8b86c8e60&gt;
+&lt;environment: 0x5828c9d87ab0&gt;
 
 attr(,"class")
 [1] "tkwin"</code></pre>

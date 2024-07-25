@@ -89,7 +89,7 @@ Qual a diferença entre anexar e carregar um pacote?
 ::: Proof
 **I) Complemento de leitura:**
 
-\noindent Como sugestão, recomendamos a leitura do Capítulo 8 @Rbasico2022, @rcore2021writing e @hadley2015.
+\noindent Como sugestão, recomendamos a leitura do Capítulo 8 [@Rbasico2022], @rcore2021writing e @hadley2015.
 
 **II) Discussão:**
 
