@@ -117,10 +117,6 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Example {
-  --color1: #c0c0c0;
-  --color2: #808080;
-}
 .Exercise {
   --color1: #4485f6;
   --color2: #7c90b2;
@@ -129,6 +125,10 @@ div.csl-indent {
   --color1: #aaa6a3;
 }
 .Theorem {
+  --color1: #c0c0c0;
+  --color2: #808080;
+}
+.Example {
   --color1: #c0c0c0;
   --color2: #808080;
 }
@@ -337,7 +337,64 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.1" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>
+<p><strong>I) Complemento de leitura:</strong></p>
+<p>Como sugestão, recomendamos a leitura do Capítulo 8 <span class="citation" data-cites="Rbasico2022">Batista e Oliveira (<a href="references.html#ref-Rbasico2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="rcore2021writing">R CORE TEAM (<a href="references.html#ref-rcore2021writing" role="doc-biblioref">2022</a>)</span> e <span class="citation" data-cites="hadley2015">Wickham (<a href="references.html#ref-hadley2015" role="doc-biblioref">2015</a>)</span>.</p>
+<p><strong>II) Discussão:</strong></p>
+<p>Dois termos muito confundidos no <a href="http://r-project.org/" target="_blank">R</a> são: <strong>carregar</strong> e <strong>anexar</strong> um pacote. O primeiro termo como o próprio nome sugere, representa a ação de carregar todas as funções, conjunto de dados de um referido pacote. Porém, a nível de usuário, esses objetos não estão disponíveis diretamente, a menos que se use o operador “<code>::</code>”. Para que os objetos de um pacote estejam disponíveis ao usuário, o pacote deve ser anexado, isto é, inserido no caminho de busca <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022, p. 247</a>)</span>. Por exemplo, quando usamos as funções <code>library()</code> ou <code>require()</code>, estamos sequencialmente carregando e anexando ao caminho de busca o referido pacote. De outro modo, quando anexamos um pacote obrigatoriamente ocorre o carregamento, e posteriormente a anexação ao caminho de busca. Assim, após esta ação, o usuário simplesmente digita o nome de uma determinada função no <em>prompt</em> de comando, sem necessidade de referenciar o nome do pacote anexado (usando o operador <code>::</code>). Portanto, quando usamos as funções <code>library()</code> ou , dizemos que ``anexamos um pacote’‘, e não’‘carregamos o pacote’’.</p>
+<p>Complementando o que foi discutido anteriormente, <span class="citation" data-cites="hadley2015">Wickham (<a href="references.html#ref-hadley2015" role="doc-biblioref">2015</a>)</span> afirma que:</p>
+<ul>
+<li>O <strong>carregamento</strong> irá carregar o código, dados e quaisquer <em>DLLs</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, registra os métodos S3 e S4, e executa a função <code>.onLoad()</code>. Após isso, o pacote fica disponível na memória virtual, mas não acessível no caminho de busca. Daí o usuário não terá como acessar os objetos do pacote diretamente, a menos que use <code>::</code>, isto é, <code>nome_pacote::nome_função</code>; que por sua vez, o operador <code>::</code> realiza o carregamento do pacote, se ainda não estiver carregado, e posteriormente, acessa os objetos sem estarem anexados. É bom lembrar que o operador <code>::</code> não acessa os objetos pelo ambiente <code>package:nome_pacote</code> no caminho de busca, até porque o pacote pode ainda nem ter sido anexado. É muito raro precisar de carregar um pacote explicitamente, <em>a menos que seja necessário saber internamente no seu pacote, se determinado pacote foi carregado</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Caso também seja do interesse acessar funções internas não exportáveis do pacote, podemos usar o operador <code>:::</code>;</li>
+<li><strong>Anexar</strong> um pacote significa colocá-lo no caminho de busca. Não é possível anexar um pacote sem primeiro tê-lo carregado, que no caso representa usar uma das funções <code>library()</code> ou <code>require()</code>.</li>
+</ul>
+<p><strong>III) Usando o <a href="http://r-project.org/" target="_blank">R</a>:</strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chamando uma funcao sem anexar o pacote 'tcltk'</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tktoplevel</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in tktoplevel(): não foi possível encontrar a função "tktoplevel"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chamando tktoplevel() apenas por '::' (Carregando!)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tcltk<span class="sc">::</span><span class="fu">tktoplevel</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$ID
+[1] ".1"
+
+$env
+&lt;environment: 0x62f8b84bcc30&gt;
+
+attr(,"class")
+[1] "tkwin"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Anexando o pacote ao caminho de busca</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>() <span class="co"># Verificando o caminho de busca</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] ".GlobalEnv"        "package:stats"     "package:graphics" 
+[4] "package:grDevices" "package:utils"     "package:datasets" 
+[7] "package:methods"   "Autoloads"         "package:base"     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Observe que nao existe o ambiente de pacote 'package:tcltk'</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tcltk)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>() <span class="co"># Verificando o caminho de busca novamente</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] ".GlobalEnv"        "package:tcltk"     "package:stats"    
+ [4] "package:graphics"  "package:grDevices" "package:utils"    
+ [7] "package:datasets"  "package:methods"   "Autoloads"        
+[10] "package:base"     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Agora se observa 'package:tcltk'</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tktoplevel</span>() <span class="co"># Chamando sem necessidade de referenciar 'tcltk'</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$ID
+[1] ".2"
+
+$env
+&lt;environment: 0x62f8b86c8e60&gt;
+
+attr(,"class")
+[1] "tkwin"</code></pre>
+</div>
+</div>
 </div></details>
 </div>
 <div id="ex02" class="Exercise">
@@ -345,7 +402,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.2" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex03" class="Exercise">
@@ -353,7 +410,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.3" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex04" class="Exercise">
@@ -361,19 +418,19 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.4" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex05" class="Exercise">
 <details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 1.5</strong></summary><div>
 <p>Quantos objetos temos na linha de comando a seguir?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div></details>
 </div>
 <div id="Proof*-1.5" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex06" class="Exercise">
@@ -381,7 +438,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.6" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex07" class="Exercise">
@@ -389,7 +446,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.7" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex08" class="Exercise">
@@ -397,7 +454,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.8" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex09" class="Exercise">
@@ -405,7 +462,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.9" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex10" class="Exercise">
@@ -413,7 +470,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.10" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex11" class="Exercise">
@@ -421,7 +478,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.11" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex12" class="Exercise">
@@ -429,7 +486,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.12" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex13" class="Exercise">
@@ -437,7 +494,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.13" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex14" class="Exercise">
@@ -445,7 +502,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.14" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex15" class="Exercise">
@@ -453,26 +510,26 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.15" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex16" class="Exercise">
 <details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 1.16</strong></summary><div>
 <p>Considerando o <em>script</em> abaixo:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome "n" associado a um objeto 10</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f1 <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n) <span class="co"># Imprimindo "n"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">15</span> <span class="co"># Criando "n" no corpo da funcao</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n) <span class="co"># Imprimindo n</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">f1</span>(); n <span class="co"># Imprimindo "f1" e "n"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um nome "n" associado a um objeto 10</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>f1 <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n) <span class="co"># Imprimindo "n"</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">15</span> <span class="co"># Criando "n" no corpo da funcao</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(n) <span class="co"># Imprimindo n</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">f1</span>(); n <span class="co"># Imprimindo "f1" e "n"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div></details>
 </div>
 <div id="Proof*-1.16" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex17" class="Exercise">
@@ -480,7 +537,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.17" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex18" class="Exercise">
@@ -488,7 +545,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.18" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex19" class="Exercise">
@@ -496,7 +553,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.19" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex20" class="Exercise">
@@ -504,7 +561,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.20" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex21" class="Exercise">
@@ -512,7 +569,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.21" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex22" class="Exercise">
@@ -520,7 +577,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.22" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex23" class="Exercise">
@@ -528,7 +585,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.23" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex24" class="Exercise">
@@ -536,7 +593,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.24" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <div id="ex25" class="Exercise">
@@ -544,7 +601,7 @@ div.csl-indent {
 </div></details>
 </div>
 <div id="Proof*-1.25" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Prova</strong></summary><div>Isso é uma prova!<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Isso é uma prova!<p></p>
 </div></details>
 </div>
 <!-- Baseado em: -->
@@ -573,7 +630,21 @@ div.csl-indent {
 <div id="ref-Rbasico2022" class="csl-entry" role="listitem">
 BATISTA, B. D. O.; OLIVEIRA, D. A. B. J. <strong>R básico</strong>. 1. ed. Ouro Branco, MG: [s.n.], 2022. p. 321
 </div>
+<div id="ref-rcore2021writing" class="csl-entry" role="listitem">
+R CORE TEAM. <strong><a href="https://cran.r-project.org/manuals.html">Writing <span>R</span> extensions</a></strong>. Vienna, Austria: [s.n.]. p. 203
 </div>
+<div id="ref-hadley2015" class="csl-entry" role="listitem">
+WICKHAM, H. <strong><a href="https://r-pkgs.org/index.html"><span>R</span> Packages</a></strong>. Sebastopol: O’Reilly Media, 2015. p. 202
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Do inglês, <em>Dynamic Link Library</em>, isto é, um arquivo (biblioteca de vínculo dinâmico) contendo código e dados, do qual estas informações podem ser utilizadas por mais de um programa ao mesmo tempo.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Nesse caso, não se recomenda utilizar <code>library()</code> ou <code>require()</code> para essa finalidade. Para isso, devemos usar as funções <code>requireNamespace()</code> ou <code>loadNamesoace()</code>, ou inserirmos os pacotes dependentes nos campos <em>Depends</em>, <em>Imports</em>, ou em <em>Sugests</em> no arquivo <em>DESCRIPTION</em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Por questão de estética do código, simplificamos a representação dos ambientes de pacote de <code>package:&lt;nome\_pacote&gt;</code> para <code>pack:&lt;nome\_pacote&gt;</code>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

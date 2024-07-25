@@ -60,7 +60,7 @@ custom-numbered-blocks:
       colors: [aaa6a3, ]
       collapse: true
       boxstyle: foldbox.simple
-      label: Prova
+      label: Solução do exercício
     
 
 

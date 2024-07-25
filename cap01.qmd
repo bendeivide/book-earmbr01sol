@@ -87,7 +87,36 @@ Qual a diferença entre anexar e carregar um pacote?
 :::
 
 ::: Proof
-Isso é uma prova!
+**I) Complemento de leitura:**
+
+\noindent Como sugestão, recomendamos a leitura do Capítulo 8 @Rbasico2022, @rcore2021writing e @hadley2015.
+
+**II) Discussão:**
+
+Dois termos muito confundidos no `r rlink` são:  **carregar** e **anexar** um pacote. O primeiro termo como o próprio nome sugere, representa a ação de carregar todas as funções, conjunto de dados de um referido pacote. Porém, a nível de usuário, esses objetos não estão disponíveis diretamente, a menos que se use o operador "`::`". Para que os objetos de um pacote estejam disponíveis ao usuário, o pacote deve ser anexado, isto é, inserido no caminho de busca [@Rbasico2022, p. 247]. Por exemplo, quando usamos as funções `library()` ou `require()`, estamos sequencialmente carregando e anexando ao caminho de busca o referido pacote. De outro modo, quando anexamos um pacote obrigatoriamente ocorre o carregamento, e posteriormente a anexação ao caminho de busca. Assim, após esta ação, o usuário simplesmente digita o nome de uma determinada função no *prompt* de comando, sem necessidade de referenciar o nome do pacote anexado (usando o operador `::`). Portanto, quando usamos as funções `library()` ou \index{Pacotes nativos!base!require@"\code{require()}}\code{require()}, dizemos que ``anexamos um pacote'', e não ''carregamos o pacote''.
+
+Complementando o que foi discutido anteriormente, @hadley2015 afirma que:
+
+- O **carregamento** irá carregar o código, dados e quaisquer *DLLs*^[Do inglês, *Dynamic Link Library*, isto é, um arquivo (biblioteca de vínculo dinâmico) contendo código e dados, do qual estas informações podem ser utilizadas por mais de um programa ao mesmo tempo.], registra os métodos S3 e S4, e executa a função `.onLoad()`. Após isso, o pacote fica disponível na memória virtual, mas não acessível no caminho de busca. Daí o usuário não terá como acessar os objetos do pacote diretamente, a menos que use `::`, isto é, `nome_pacote::nome_função`; que por sua vez, o operador `::` realiza o carregamento do pacote, se ainda não estiver carregado, e posteriormente, acessa os objetos sem estarem anexados. É bom lembrar que o operador `::` não acessa os objetos pelo ambiente `package:nome_pacote` no caminho de busca, até porque o pacote pode ainda nem ter sido anexado. É muito raro precisar de carregar um pacote explicitamente, *a menos que seja necessário saber internamente no seu pacote, se determinado pacote foi carregado*^[Nesse caso, não se recomenda utilizar `library()` ou `require()` para essa finalidade. Para isso, devemos usar as funções `requireNamespace()` ou `loadNamesoace()`, ou inserirmos os pacotes dependentes nos campos *Depends*, *Imports*, ou em *Sugests* no arquivo *DESCRIPTION*.]. Caso também seja do interesse acessar funções internas não exportáveis do pacote, podemos usar o operador `:::`;
+- **Anexar** um pacote significa colocá-lo no caminho de busca. Não é possível anexar um pacote sem primeiro tê-lo carregado, que no caso representa usar uma das funções `library()` ou `require()`.
+
+**III) Usando o `r rlink`:**^[Por questão de estética do código, simplificamos a representação dos ambientes de pacote de `package:<nome\_pacote>` para `pack:<nome\_pacote>`.]
+
+```{r error=TRUE}
+# Chamando uma funcao sem anexar o pacote 'tcltk'
+tktoplevel()
+# Chamando tktoplevel() apenas por '::' (Carregando!)
+tcltk::tktoplevel()
+# Anexando o pacote ao caminho de busca
+search() # Verificando o caminho de busca
+# Observe que nao existe o ambiente de pacote 'package:tcltk'
+library(tcltk)
+search() # Verificando o caminho de busca novamente
+# Agora se observa 'package:tcltk'
+tktoplevel() # Chamando sem necessidade de referenciar 'tcltk'
+```
+
+
 :::
 
 ::: {.Exercise #ex02}
