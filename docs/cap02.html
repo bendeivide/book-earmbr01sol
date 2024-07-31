@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ben Dêivide de O. Batista">
 
-<title>R básico: Manual de soluções</title>
+<title>R básico: Manual de soluções - 2&nbsp; História e instalação do R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./prefacio.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./cap01.html" rel="prev">
 <link href="./favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -93,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Bem-vindo</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap02.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bem-vindo</span></a>
   </div>
 </li>
@@ -145,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cap02.html" class="sidebar-item-text sidebar-link">
+  <a href="./cap02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></span></a>
   </div>
 </li>
@@ -165,11 +184,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#bem-vindo" id="toc-bem-vindo" class="nav-link active" data-scroll-target="#bem-vindo">Bem-vindo</a></li>
-  <li><a href="#livro-físico" id="toc-livro-físico" class="nav-link" data-scroll-target="#livro-físico">Livro físico</a></li>
-  <li><a href="#isbn" id="toc-isbn" class="nav-link" data-scroll-target="#isbn">ISBN</a></li>
-  <li><a href="#licença" id="toc-licença" class="nav-link" data-scroll-target="#licença">Licença</a></li>
-  <li><a href="#como-citar" id="toc-como-citar" class="nav-link" data-scroll-target="#como-citar">Como citar</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link active" data-scroll-target="#exercícios"><span class="header-section-number">2.1</span> Exercícios</a></li>
   </ul>
 </nav>
     </div>
@@ -178,19 +193,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R básico: Manual de soluções</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ben Dêivide de O. Batista </p>
-          </div>
-  </div>
     
   
     
@@ -199,54 +208,95 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="exercícios" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">2.1</span> Exercícios</h2>
+<div id="ex21" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.1</strong></summary><div>Qual a importância de John Chambers para a linguagem <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.1" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>John Chambers foi o principal criador da linguagem <strong>S</strong>, e toda a base programada para a área da estatística no <a href="http://r-project.org/" target="_blank">R</a> está fundamentada nessa linguagem, bem como outras ferramentas computacionais. Observamos nos manuais de ajuda dos objetos em <a href="http://r-project.org/" target="_blank">R</a>, principalmente os do pacote <a href="https://www.r-project.org/">base</a>, que as referências para a implementação usam em grande parte são os livros do John Chambers, vulgarmente chamados de livros branco, azul e verde.<p></p>
+</div></details>
+</div>
+<div id="ex22" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.2</strong></summary><div>Por que chamamos a linguagem <a href="http://r-project.org/" target="_blank">R</a> também de ambiente <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, podemos pesquisar em <a href="https://www.r-project.org/about.html" class="uri">https://www.r-project.org/about.html</a>, para complementar as informações contidas neste livro.<p></p>
+</div></details>
+</div>
+<div id="ex23" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.3</strong></summary><div>Pesquise sobre outras <em>IDE</em>s que possam dar suporte ao <a href="http://r-project.org/" target="_blank">R</a>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Podemos realizar uma pesquisa nas páginas de buscas do tipo: “<em>R programming ide</em>”, “<em>IDE for R</em>”, que será encontrado muitas outras opções.<p></p>
+</div></details>
+</div>
+<div id="ex24" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.4</strong></summary><div>Quais as vantagens e cuidados que devemos ter com o ambiente <a href="http://r-project.org/" target="_blank">R</a>, sabendo que é uma linguagem de escopo léxico?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.4" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Capítulo 2, Seção 2.2, e Capítulo 9 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+</div></details>
+</div>
+<div id="ex25" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.5</strong></summary><div>O que a superatribuição tem a ver com o escopo léxico?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.5" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Código 2.4 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+</div></details>
+</div>
+<div id="ex26" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.6</strong></summary><div>Poderíamos afirmar que o uso do <a href="http://rstudio.org/" target="_blank">RStudio</a> para iniciantes em <a href="http://r-project.org/" target="_blank">R</a> não seria uma boa escolha para a aprendizagem dessa linguagem?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Capítulo 2, Seções 2.2 e 2.3 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+</div></details>
+</div>
+<div id="ex27" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.7</strong></summary><div>Qual o objetivo inicial do <a href="http://r-project.org/" target="_blank">R</a>, e quais avanços alcançados desse ambiente?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.7" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Informações iniciais se encontram no início do referente capítulo, porém podemos pesquisar também em <a href="https://www.r-project.org/about.html" class="uri">https://www.r-project.org/about.html</a>.<p></p>
+</div></details>
+</div>
+<div id="ex28" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.8</strong></summary><div>Quem criou e onde foi desenvolvida a linguagem <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Capítulo 2, Seção 2.1 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+</div></details>
+</div>
+<div id="ex29" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.9</strong></summary><div>O que significa <a href="http://cran.r-project.org/" target="_blank">CRAN</a> e qual a sua finalidade?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.9" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Além da leitura inicial deste capítulo, podemos pesquisar em <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.<p></p>
+</div></details>
+</div>
+<div id="ex210" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.10</strong></summary><div>Qual a importância das linguagens <strong>C</strong>, <strong>FORTRAN</strong> e <strong>S</strong> para o ambiente <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+</div></details>
+</div>
+<div id="Proof*-2.10" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Terceiro princípio do <a href="http://r-project.org/" target="_blank">R</a>: Princípio da interface <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+</div></details>
+</div>
 
-<section id="bem-vindo" class="level1 unnumbered">
-<h1 class="unnumbered">Bem-vindo</h1><p><img src="hardcover.png" title="R básico: Manual de soluções" class="quarto-cover-image img-fluid"></p>
-Esse é um <em>livro digital</em> intitulado <strong>“<a href="https://bendeivide.github.io/books/eambr01sol/">R básico: Manual de soluções</a>”</strong>, com o selo <a href="https://bendeivide.github.io/dc/">Democratizando Conhecimento (DC)</a>. Este livro é um convite ao manual de soluções do <a href="https://bendeivide.github.io/books/eambr01/">R básico</a>, apresentando de forma sistemáticas as resoluções dos exercícios do livro referência. Fazemos uma abordagem teórica e aplicada utilizando <em>scripts</em> em código R. <br> <br> <strong>O número de leitores que acessaram esse livro:</strong> <br>
-<center>
-<!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank"> <img src="https://hitwebcounter.com/counter/counter.php?page=15014826&amp;style=0006&amp;nbdigits=9&amp;type=page&amp;initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0"></a>
-</center>
-</section>
-<section id="livro-físico" class="level1 unnumbered">
-<h1 class="unnumbered">Livro físico</h1>
-<p>Este livro ainda se encontra em desenvolvimento!</p>
-</section>
-<section id="isbn" class="level1 unnumbered">
-<h1 class="unnumbered">ISBN</h1>
-<ul>
-<li><strong>ISBN</strong> (Digital):</li>
-<li><strong>ISBN</strong> (Físico):</li>
-</ul>
-</section>
-<section id="licença" class="level1 unnumbered">
-<h1 class="unnumbered">Licença</h1>
-<div class="columns">
-<div class="column v-center-container" style="width:30%;">
-<p><br></p>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a></p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-</a></div><div class="column" style="width:70%;"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-</a><p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a><br>Este trabalho está sob a Licença <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons - Atribuição-NãoComercial 4.0 Internacional</a>.</p>
-</div>
-</div>
-<div class="columns">
-<div class="column v-center-container" style="width:30%;">
-<p><br></p>
-<p><a href="https://bendeivide.github.io/dc/"><img src="SeloDC-preto.png" align="left" width="100"></a></p>
-</div><div class="column" style="width:70%;">
-<p>Usamos também a filosofia de trabalho com o Selo Democratizando Conhecimento (DC), que pode ser acessada em <a href="https://bendeivide.github.io/dc/" class="uri">https://bendeivide.github.io/dc/</a>. O leitor é livre para compartilhar, redistribuir, transformar ou adaptar esta obra, desde que não venha a utilizá-la em nenhuma atividade de propósito comercial. Por fim, a única exigência é a atribuição dos créditos aos autores da obra.</p>
-</div>
-</div>
-<p><br> <br></p>
-</section>
-<section id="como-citar" class="level1 unnumbered">
-<h1 class="unnumbered">Como citar</h1>
-<ul>
-<li>Como citar essa obra (Impressa):</li>
-<li>Como citar essa obra (Digital):</li>
-</ul>
 
-
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-Rbasico2022" class="csl-entry" role="listitem">
+BATISTA, B. D. O.; OLIVEIRA, D. A. B. J. <strong>R básico</strong>. 1. ed. Ouro Branco, MG: [s.n.], 2022. p. 321
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -485,10 +535,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./cap01.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Entendendo a coleção Estudando o ambiente R</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./prefacio.html" class="pagination-link">
-        <span class="nav-page-text">Prefácio</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">Referências</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

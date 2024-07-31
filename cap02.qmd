@@ -1,0 +1,106 @@
+# História e instalação do R
+
+```{r, include=FALSE}
+# Links
+rlink <- "[R](http://r-project.org/){target='_blank'}"
+rstudio <- "[RStudio](http://rstudio.org/){target='_blank'}"
+cran <- "[CRAN](http://cran.r-project.org/){target='_blank'}"
+github <- "[GitHub](http://github.com/){target='_blank'}"
+git <- "[Git](https://git-scm.com/)"
+```
+
+
+
+## Exercícios
+
+::: {.Exercise #ex21}
+Qual a importância de John Chambers para a linguagem `r rlink`?
+:::
+
+::: Proof
+John Chambers foi o principal criador da linguagem **S**, e toda a base programada para a área da estatística no `r rlink` está fundamentada nessa linguagem, bem como outras ferramentas computacionais. Observamos nos manuais de ajuda dos objetos em `r rlink`, principalmente os do pacote [base](https://www.r-project.org/), que as referências para a implementação usam em grande parte são os livros do John Chambers, vulgarmente chamados de livros branco, azul e verde.
+:::
+
+
+::: {.Exercise #ex22}
+Por que chamamos a linguagem `r rlink` também de ambiente `r rlink`?
+:::
+
+::: Proof
+Como sugestão, podemos pesquisar em <https://www.r-project.org/about.html>, para complementar as informações contidas neste livro.
+:::
+
+
+::: {.Exercise #ex23}
+Pesquise sobre outras *IDE*s que possam dar suporte ao `r rlink`.
+:::
+
+::: Proof
+Podemos realizar uma pesquisa nas páginas de buscas do tipo: "*R programming ide*", "*IDE for R*", que será encontrado muitas outras opções.
+:::
+
+
+::: {.Exercise #ex24}
+Quais as vantagens e cuidados que devemos ter com o ambiente `r rlink`, sabendo que é uma linguagem de escopo léxico?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura do Capítulo 2, Seção 2.2, e Capítulo 9 [@Rbasico2022].
+:::
+
+
+::: {.Exercise #ex25}
+O que a superatribuição tem a ver com o escopo léxico?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura do Código 2.4 [@Rbasico2022].
+:::
+
+
+::: {.Exercise #ex26}
+Poderíamos afirmar que o uso do `r rstudio` para iniciantes em `r rlink` não seria uma boa escolha para a aprendizagem dessa linguagem?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura do Capítulo 2, Seções 2.2 e 2.3 [@Rbasico2022].
+:::
+
+
+::: {.Exercise #ex27}
+Qual o objetivo inicial do `r rlink`, e quais avanços alcançados desse ambiente?
+:::
+
+::: Proof
+Informações iniciais se encontram no início do referente capítulo, porém podemos pesquisar também em <https://www.r-project.org/about.html>.
+:::
+
+
+::: {.Exercise #ex28}
+Quem criou e onde foi desenvolvida a linguagem `r rlink`?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura do Capítulo 2, Seção 2.1 [@Rbasico2022].
+:::
+
+
+
+::: {.Exercise #ex29}
+O que significa `r cran` e qual a sua finalidade?
+:::
+
+::: Proof
+Além da leitura inicial deste capítulo, podemos pesquisar em <https://cran.r-project.org/>.
+:::
+
+
+::: {.Exercise #ex210}
+Qual a importância das linguagens **C**, **FORTRAN** e **S** para o ambiente `r rlink`?
+:::
+
+::: Proof
+Terceiro princípio do `r rlink`: Princípio da interface [@Rbasico2022].
+:::
+
+

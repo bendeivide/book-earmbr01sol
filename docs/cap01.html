@@ -83,7 +83,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./cap02.html" rel="next">
 <link href="./prefacio.html" rel="prev">
 <link href="./favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -121,12 +121,12 @@ div.csl-indent {
   --color1: #4485f6;
   --color2: #7c90b2;
 }
+.Proof {
+  --color1: #aaa6a3;
+}
 .Example {
   --color1: #c0c0c0;
   --color2: #808080;
-}
-.Proof {
-  --color1: #aaa6a3;
 }
 .Theorem {
   --color1: #c0c0c0;
@@ -198,8 +198,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./cap02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Referências</span></a>
   </div>
 </li>
     </ul>
@@ -274,18 +280,18 @@ div.csl-indent {
 <li>ambiente de chamada (Exercícios <a href="cap01.html#ex09">1.9</a>, <a href="cap01.html#ex10">1.10</a>)</li>
 <li>ambiente de execução (Exercícios <a href="cap01.html#ex10">1.10</a>)</li>
 </ul></li>
-<li>Objetos: (Exercício <a href="cap01.html#ex25">1.25</a>)
+<li>Objetos: (Exercício <a href="cap02.html#ex25">2.5</a>)
 <ul>
 <li>atribuição (Exercícios <a href="cap01.html#ex05">1.5</a>, <a href="cap01.html#ex15">1.15</a>)</li>
 <li>lista (Exercício <a href="cap01.html#ex17">1.17</a>)</li>
-<li>ambiente (Exercício <a href="cap01.html#ex23">1.23</a>)</li>
-<li>atributos (Exercício <a href="cap01.html#ex21">1.21</a>)
+<li>ambiente (Exercício <a href="cap02.html#ex23">2.3</a>)</li>
+<li>atributos (Exercício <a href="cap02.html#ex21">2.1</a>)
 <ul>
-<li>intrínseco (Exercício <a href="cap01.html#ex21">1.21</a>)</li>
-<li><code>class</code> (Exercício <a href="cap01.html#ex21">1.21</a>)</li>
+<li>intrínseco (Exercício <a href="cap02.html#ex21">2.1</a>)</li>
+<li><code>class</code> (Exercício <a href="cap02.html#ex21">2.1</a>)</li>
 </ul></li>
 </ul></li>
-<li>Estrutura de dados: (Exercício <a href="cap01.html#ex25">1.25</a>)
+<li>Estrutura de dados: (Exercício <a href="cap02.html#ex25">2.5</a>)
 <ul>
 <li>vetor (Exercício <a href="cap01.html#ex15">1.15</a>)</li>
 <li>matriz (Exercício <a href="cap01.html#ex15">1.15</a>)</li>
@@ -296,20 +302,20 @@ div.csl-indent {
 <ul>
 <li>anônima (Exercício <a href="cap01.html#ex08">1.8</a>)</li>
 <li>chamada de função (Exercício <a href="cap01.html#ex15">1.15</a>)</li>
-<li>escopo (Exercício <a href="cap01.html#ex23">1.23</a>)
+<li>escopo (Exercício <a href="cap02.html#ex23">2.3</a>)
 <ul>
 <li>léxico (Exercício <a href="cap01.html#ex16">1.16</a>)</li>
 </ul></li>
-<li>função <code>print()</code>(Exercício <a href="cap01.html#ex24">1.24</a>)</li>
+<li>função <code>print()</code>(Exercício <a href="cap02.html#ex24">2.4</a>)</li>
 </ul></li>
 <li>Como <a href="http://r-project.org/" target="_blank">R</a> trabalha:
 <ul>
 <li><em>script</em> (Exercícios <a href="cap01.html#ex07">1.7</a>, <a href="cap01.html#ex16">1.16</a>)</li>
-<li>linhas de comando (Exercícios <a href="cap01.html#ex05">1.5</a>, <a href="cap01.html#ex11">1.11</a>, <a href="cap01.html#ex24">1.24</a>)</li>
+<li>linhas de comando (Exercícios <a href="cap01.html#ex05">1.5</a>, <a href="cap01.html#ex11">1.11</a>, <a href="cap02.html#ex24">2.4</a>)</li>
 <li>comentar um código (Exercício <a href="cap01.html#ex13">1.13</a>)</li>
 <li><a href="http://rstudio.org/" target="_blank">RStudio</a> (Exercício <a href="cap01.html#ex14">1.14</a>)</li>
-<li>arquivos <code>.Rhistory</code> e <code>.RData</code> (Exercício <a href="cap01.html#ex22">1.22</a>)</li>
-<li>console (Exercício <a href="cap01.html#ex24">1.24</a>)</li>
+<li>arquivos <code>.Rhistory</code> e <code>.RData</code> (Exercício <a href="cap02.html#ex22">2.2</a>)</li>
+<li>console (Exercício <a href="cap02.html#ex24">2.4</a>)</li>
 </ul></li>
 </ul>
 </section>
@@ -361,7 +367,7 @@ div.csl-indent {
 [1] ".1"
 
 $env
-&lt;environment: 0x5828c9b7b880&gt;
+&lt;environment: 0x650ba5aad0b8&gt;
 
 attr(,"class")
 [1] "tkwin"</code></pre>
@@ -389,7 +395,7 @@ attr(,"class")
 [1] ".2"
 
 $env
-&lt;environment: 0x5828c9d87ab0&gt;
+&lt;environment: 0x650ba5cb6dc8&gt;
 
 attr(,"class")
 [1] "tkwin"</code></pre>
@@ -888,8 +894,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./cap02.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
