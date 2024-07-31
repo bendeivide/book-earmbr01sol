@@ -10,7 +10,7 @@ book:
   page-navigation: true
   reader-mode: true
   cover-image: hardcover.png
-  favicon: favicon.ico
+  favicon: hardcover.png
   title: "R básico: Manual de soluções"
   author: "Ben Dêivide de O. Batista"
   date: ""
