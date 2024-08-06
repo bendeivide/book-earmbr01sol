@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R básico: Manual de soluções - 2&nbsp; História e instalação do R</title>
+<title>R básico: Manual de soluções - 3&nbsp; Como o R trabalha?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,8 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cap03.html" rel="next">
-<link href="./cap01.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./cap02.html" rel="prev">
 <link href="./hardcover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,12 +83,12 @@ div.csl-indent {
   }
 }</script>
 <style>
+.Proof {
+  --color1: #aaa6a3;
+}
 .Exercise {
   --color1: #4485f6;
   --color2: #7c90b2;
-}
-.Proof {
-  --color1: #aaa6a3;
 }
 .Example {
   --color1: #c0c0c0;
@@ -112,7 +112,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap02.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap03.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Como o R trabalha?</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -164,13 +164,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cap02.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cap02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cap03.html" class="sidebar-item-text sidebar-link">
+  <a href="./cap03.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Como o R trabalha?</span></span></a>
   </div>
 </li>
@@ -190,7 +190,7 @@ div.csl-indent {
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#exercícios" id="toc-exercícios" class="nav-link active" data-scroll-target="#exercícios"><span class="header-section-number">2.1</span> Exercícios</a></li>
+  <li><a href="#exercícios" id="toc-exercícios" class="nav-link active" data-scroll-target="#exercícios"><span class="header-section-number">3.1</span> Exercícios</a></li>
   </ul>
 </nav>
     </div>
@@ -199,7 +199,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Como o R trabalha?</span></h1>
 </div>
 
 
@@ -214,86 +214,94 @@ div.csl-indent {
 
 </header>
 
-<section id="exercícios" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">2.1</span> Exercícios</h2>
-<div id="ex21" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.1</strong></summary><div>Qual a importância de John Chambers para a linguagem <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+<section id="exercícios" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercícios"><span class="header-section-number">3.1</span> Exercícios</h2>
+<div id="ex31" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.1</strong></summary><div>Como recuperamos os objetos no ambiente <a href="http://r-project.org/" target="_blank">R</a>? Qual o objeto mais importante dessa recuperação?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.1" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>John Chambers foi o principal criador da linguagem <strong>S</strong>, e toda a base programada para a área da estatística no <a href="http://r-project.org/" target="_blank">R</a> está fundamentada nessa linguagem, bem como outras ferramentas computacionais. Observamos nos manuais de ajuda dos objetos em <a href="http://r-project.org/" target="_blank">R</a>, principalmente os do pacote <a href="https://www.r-project.org/">base</a>, que as referências para a implementação usam em grande parte são os livros do John Chambers, vulgarmente chamados de livros branco, azul e verde.<p></p>
+<div id="Proof*-3.1" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura sobre ambientes.<p></p>
 </div></details>
 </div>
-<div id="ex22" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.2</strong></summary><div>Por que chamamos a linguagem <a href="http://r-project.org/" target="_blank">R</a> também de ambiente <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+<div id="ex32" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.2</strong></summary><div>Como criamos duas execuções de comando em uma única linha de comando?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.2" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, podemos pesquisar em <a href="https://www.r-project.org/about.html" class="uri">https://www.r-project.org/about.html</a>, para complementar as informações contidas neste livro.<p></p>
+<div id="Proof*-3.2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura sobre execução de comandos.<p></p>
 </div></details>
 </div>
-<div id="ex23" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.3</strong></summary><div>Pesquise sobre outras <em>IDE</em>s que possam dar suporte ao <a href="http://r-project.org/" target="_blank">R</a>.<p></p>
+<div id="ex33" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.3</strong></summary><div>Quais as diferenças em usar a interface <em>RGui</em> do <a href="http://r-project.org/" target="_blank">R</a> (SO <em>Windows</em>) e a <em>IDE</em> ?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.3" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Podemos realizar uma pesquisa nas páginas de buscas do tipo: “<em>R programming ide</em>”, “<em>IDE for R</em>”, que será encontrado muitas outras opções.<p></p>
+<div id="Proof*-3.3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura sobre como usar o <a href="http://r-project.org/" target="_blank">R</a> e <a href="http://rstudio.org/" target="_blank">RStudio</a>.<p></p>
 </div></details>
 </div>
-<div id="ex24" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.4</strong></summary><div>Quais as vantagens e cuidados que devemos ter com o ambiente <a href="http://r-project.org/" target="_blank">R</a>, sabendo que é uma linguagem de escopo léxico?<p></p>
+<div id="ex34" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.4</strong></summary><div>Quais as diferenças entre nomes sintático, não sintáticos e palavras reservadas no ambiente <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.4" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Capítulo 2, Seção 2.2, e Capítulo 9 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+<div id="Proof*-3.4" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura na subseção sobre <em>console</em> e <em>prompt</em> de comando, do Capítulo 3 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
 </div></details>
 </div>
-<div id="ex25" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.5</strong></summary><div>O que a superatribuição tem a ver com o escopo léxico?<p></p>
+<div id="ex35" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.5</strong></summary><div>O que representa o ambiente global?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.5" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Código 2.4 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+<div id="Proof*-3.5" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura da seção sobre ambiente global e diretório de trabalho, do Capítulo 3 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>. Mais detalhes pode ser encontrado no Capítulo 9 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
 </div></details>
 </div>
-<div id="ex26" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.6</strong></summary><div>Poderíamos afirmar que o uso do <a href="http://rstudio.org/" target="_blank">RStudio</a> para iniciantes em <a href="http://r-project.org/" target="_blank">R</a> não seria uma boa escolha para a aprendizagem dessa linguagem?<p></p>
+<div id="ex36" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.6</strong></summary><div>Quais as diferenças entre <em>.RData</em> e <em>.Rhistory</em>?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.6" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Capítulo 2, Seções 2.2 e 2.3 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+<div id="Proof*-3.6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura sobre a seção sobre comandos elementares, Capítulo 3 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
 </div></details>
 </div>
-<div id="ex27" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.7</strong></summary><div>Qual o objetivo inicial do <a href="http://r-project.org/" target="_blank">R</a>, e quais avanços alcançados desse ambiente?<p></p>
+<div id="ex37" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.7</strong></summary><div>Como criar e salvar um <em>script</em> no <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.7" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Informações iniciais se encontram no início do referente capítulo, porém podemos pesquisar também em <a href="https://www.r-project.org/about.html" class="uri">https://www.r-project.org/about.html</a>.<p></p>
+<div id="Proof*-3.7" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura sobre a seção sobre comandos elementares, Capítulo 3 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
 </div></details>
 </div>
-<div id="ex28" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.8</strong></summary><div>Quem criou e onde foi desenvolvida a linguagem <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+<div id="ex38" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.8</strong></summary><div>Como podemos verificar e mudar o diretório de trabalho? Qual a sua importância?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.8" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura do Capítulo 2, Seção 2.1 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+<div id="Proof*-3.8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos o uso das funções <code>setwd()</code> e <code>getwd()</code>.<p></p>
 </div></details>
 </div>
-<div id="ex29" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.9</strong></summary><div>O que significa <a href="http://cran.r-project.org/" target="_blank">CRAN</a> e qual a sua finalidade?<p></p>
+<div id="ex39" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.9</strong></summary><div>O que entendemos por “boas práticas de escrita de um código”? Por que devemos comentar um código?<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.9" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Além da leitura inicial deste capítulo, podemos pesquisar em <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.<p></p>
+<div id="Proof*-3.9" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>No Capítulo 3 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>, apresentamos algumas ideias sobre algumas práticas de uma boa escrita de código. Mais detalhes podem ser vistos no Capítulo 7 <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
 </div></details>
 </div>
-<div id="ex210" class="Exercise">
-<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 2.10</strong></summary><div>Qual a importância das linguagens <strong>C</strong>, <strong>FORTRAN</strong> e <strong>S</strong> para o ambiente <a href="http://r-project.org/" target="_blank">R</a>?<p></p>
+<div id="ex310" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.10</strong></summary><div>Ao longo deste capítulo, mencionamos apenas algumas palavras reservadas do ambiente <a href="http://r-project.org/" target="_blank">R</a> . Pesquise sobre as demais.<p></p>
 </div></details>
 </div>
-<div id="Proof*-2.10" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Terceiro princípio do <a href="http://r-project.org/" target="_blank">R</a>: Princípio da interface <span class="citation" data-cites="Rbasico2022">(<a href="references.html#ref-Rbasico2022" role="doc-biblioref">Batista e Oliveira, 2022</a>)</span>.<p></p>
+<div id="Proof*-3.10" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Podemos pesquisar no próprio ambiente <a href="http://r-project.org/" target="_blank">R</a> com a chamada <code>?Reserved</code>.<p></p>
+</div></details>
+</div>
+<div id="ex310" class="Exercise">
+<p></p><details class="Exercise fbx-simplebox fbx-default" open=""><summary><strong>Exercício 3.11</strong></summary><div>Qual a diferença entre diretório de trabalho e diretório corrente?<p></p>
+</div></details>
+</div>
+<div id="Proof*-3.11" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default"><summary><strong>Solução do exercício</strong></summary><div>Como sugestão, recomendamos a leitura da Seção sobre ambiente global e diretório de trabalho.<p></p>
 </div></details>
 </div>
 
@@ -541,13 +549,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cap01.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Entendendo a coleção Estudando o ambiente R</span></span>
+      <a href="./cap02.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">História e instalação do R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cap03.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Como o R trabalha?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">Referências</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

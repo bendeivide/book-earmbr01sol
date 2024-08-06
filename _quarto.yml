@@ -24,6 +24,7 @@ book:
     - prefacio.qmd
     - cap01.qmd
     - cap02.qmd
+    - cap03.qmd
     - references.qmd
 
 #https://quarto.org/docs/output-formats/html-themes.html

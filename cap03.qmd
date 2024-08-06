@@ -1,0 +1,114 @@
+# Como o R trabalha?
+
+```{r, include=FALSE}
+# Links
+rlink <- "[R](http://r-project.org/){target='_blank'}"
+rstudio <- "[RStudio](http://rstudio.org/){target='_blank'}"
+cran <- "[CRAN](http://cran.r-project.org/){target='_blank'}"
+github <- "[GitHub](http://github.com/){target='_blank'}"
+git <- "[Git](https://git-scm.com/)"
+```
+
+
+
+## Exercícios
+
+::: {.Exercise #ex31}
+Como recuperamos os objetos no ambiente `r rlink`? Qual o objeto mais importante dessa recuperação?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura sobre ambientes.
+:::
+
+::: {.Exercise #ex32}
+Como criamos duas execuções de comando em uma única linha de comando?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura sobre execução de comandos.
+:::
+
+::: {.Exercise #ex33}
+Quais as diferenças em usar a interface *RGui* do `r rlink` (SO *Windows*) e a *IDE* \index{RStudio}\rstudioa?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura sobre como usar o `r rlink` e `r rstudio`.
+:::
+
+::: {.Exercise #ex34}
+Quais as diferenças entre nomes sintático, não sintáticos e palavras reservadas no ambiente `r rlink`?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura na subseção sobre *console* e *prompt* de comando, do Capítulo 3 [@Rbasico2022].
+:::
+
+
+::: {.Exercise #ex35}
+O que representa o ambiente global?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura da seção sobre ambiente global e diretório de trabalho, do Capítulo 3 [@Rbasico2022]. Mais detalhes pode ser encontrado no Capítulo 9 [@Rbasico2022].
+:::
+
+
+::: {.Exercise #ex36}
+Quais as diferenças entre *.RData* e *.Rhistory*?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura sobre a seção sobre comandos elementares, Capítulo 3 [@Rbasico2022].
+:::
+
+::: {.Exercise #ex37}
+Como criar e salvar um *script* no `r rlink`?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura sobre a seção sobre comandos elementares, Capítulo 3 [@Rbasico2022].
+:::
+
+::: {.Exercise #ex38}
+Como podemos verificar e mudar o diretório de trabalho? Qual a sua importância?
+:::
+
+::: Proof
+Como sugestão, recomendamos o uso das funções `setwd()` e `getwd()`.
+:::
+
+::: {.Exercise #ex39}
+O que entendemos por "boas práticas de escrita de um código"? Por que devemos comentar um código?
+:::
+
+::: Proof
+No Capítulo 3 [@Rbasico2022], apresentamos algumas ideias sobre algumas práticas de uma boa escrita de código. Mais detalhes podem ser vistos no Capítulo 7 [@Rbasico2022].
+:::
+
+::: {.Exercise #ex310}
+Ao longo deste capítulo, mencionamos apenas algumas palavras reservadas do ambiente `r rlink` . Pesquise sobre as demais.
+:::
+
+::: Proof
+Podemos pesquisar no próprio ambiente `r rlink` com a chamada `?Reserved`.
+:::
+
+::: {.Exercise #ex310}
+Qual a diferença entre diretório de trabalho e diretório corrente?
+:::
+
+::: Proof
+Como sugestão, recomendamos a leitura da Seção sobre ambiente global e diretório de trabalho.
+:::
+
+
+
+
+
+
+
+
+
+
